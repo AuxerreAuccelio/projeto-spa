@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header{
+    border: 2px solid crimson;
+    background-color: grey;
+}
+
+main{
+    border: 2px solid rgb(220, 20, 187);
+    background-color: rgb(255, 255, 255);
+}
+
+aside{
+    border: 2px solid rgb(20, 220, 53);
+    background-color: grey;
+}
+
+footer{
+    border: 2px solid green;
+    background-color: grey;
+}

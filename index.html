@@ -1,41 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./sript.js" defer></script>
     <title>Projeto SPA</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <header>
-        <h1>Painel de Ferramentas</h1>
+      <h1>Painel de Ferramentas</h1>
     </header>
 
-    <aside>
-        <section>
-            <button id="1"></button>
-            <button id="2"></button>
-            <button id="3"></button>
-            <button id="4"></button>
-            <button id="5"></button>
-            <button id="6"></button>
-        </section>
-    </aside>
+    <div class="container">
+      <aside>
+        <nav aria-label="Desafios">
+          <button id="btn1" aria-selected="false">Desafio 1</button>
+          <button id="btn2" aria-selected="false">Desafio 2</button>
+          <button id="btn3" aria-selected="false">Desafio 3</button>
+          <button id="btn4" aria-selected="false">Desafio 4</button>
+          <button id="btn5" aria-selected="false">Desafio 5</button>
+          <button id="btn6" aria-selected="false">Desafio 6</button>
+        </nav>
+      </aside>
 
-    <main>
-        <h3>MAIN</h3>
-    </main>
+      <main>       
+        <section id="desafio1" hidden>DESAFIO 1</section>
+        <section id="desafio2" hidden>DESAFIO 2</section>
+        <section id="desafio3" hidden>DESAFIO 3</section>
+        <section id="desafio4" hidden>DESAFIO 4</section>
+        <section id="desafio5" hidden>DESAFIO 5</section>
+        <section id="desafio6" hidden>DESAFIO 6</section>
+      </main>
+    </div>
 
     <footer>
-        <p>
-            &copy; Desenvolvido por Alxélio
-        </p>
+      <p>&copy; Desenvolvido por Alxélio</p>
     </footer>
-
-</body>
+  </body>
 </html>
-
-
-<!-- Flex Box Labs  -->

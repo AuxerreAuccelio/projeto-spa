@@ -1,8 +1,11 @@
-const botoes = document.querySelectorAll("button");
+const botoes = document.querySelectorAll("aside nav button");
 const secoes = document.querySelectorAll("section");
 
 let moeda = document.querySelector('#moedas p');
-// console.log(moeda);
+const btn_form = document.querySelector('#btn_converter');
+const entrada = document.querySelector('form #entrada');
+
+
 
 botoes.forEach(
     (btn, i) => {
@@ -32,10 +35,27 @@ async function lerConversorMoedasAPI(){
     const response = await dados.json();
     // console.log(response);
     let moeda_para_converter = parseFloat(`${response.USDBRL.bid}`);
-    moeda.innerText = moeda_para_converter.toLocaleString('pt-BR', { style: 'currency', currency: "BRL"});
-    
-    console.log(moeda);
+    calcularValor(moeda_para_converter);
 }
 
+
 lerConversorMoedasAPI();
+
+
+function calcularValor(moeda_para_converter){
+    btn_form.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    let valor = Number(entrada.value); 
+    // console.log(valor);
+
+
+    let resultado = valor * Number(moeda_para_converter);
+    resultado = resultado.toLocaleString('pt-BR', { style: 'currency', currency: "BRL"});
+    moeda.innerText = resultado;
+    console.log(moeda);
+    entrada.value = "";
+    });
+    
+}
 

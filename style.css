@@ -40,20 +40,23 @@ aside{
 }
 
 nav{
+    /* border: 2px solid crimson; */
     min-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
-    margin-top: 10px;
+    justify-content: space-between;
+    /* gap:50px; */
+    
 } 
 
 #btn1, #btn2, #btn3, #btn4, #btn5, #btn6{
     /* border: 2px solid crimson; */
-    padding: 20px 50px;
-    margin: 10px 10px;
+    padding: 30px 70px;
+    margin: 0px 20px;
     border-radius: 15px;
+    width: 100%;
+    
     
 }
 
@@ -63,8 +66,19 @@ section{
     
 }
 
+h2{
+    text-align: center;
+}
+
 input{
-    min-width: 35ch;
+    min-width: 50ch;
+}
+
+#moedas p{
+    /* border: 2px solid crimson; */
+    margin: 10px;
+    padding: 10px;
+    width: 90%;    
 }
 
 main{
@@ -83,6 +97,7 @@ footer{
     /* border: 2px solid green; */
     background-color: grey;
     text-align: center;
-
+    color: white;
     padding: 20px;
+    font-weight: bold;
 }

@@ -91,6 +91,7 @@ const dadosIMC = {
     altura: 0,
     genero: "",
     resultado_imc: 0,
+    form_imc: "",
 };    
 
 
@@ -98,37 +99,61 @@ const dadosIMC = {
 
 
 
-function setarValores(){
-        const peso = document.querySelector('#peso');
-        const altura = document.querySelector('#altura');
-        const resultado_imc = document.querySelector('#resultado_imc');
-        const opcaoSelecionada = document.querySelectorAll('input[name="genero"]');
+function setarValores(){   
+    
+    const peso = document.querySelector('#peso');
+    const altura = document.querySelector('#altura');
+    const opcaoSelecionada = document.querySelector('input[name="genero"]:checked');
+    const resultado_imc = document.querySelector('#resultado_imc');
+    
+    dadosIMC.peso = parseFloat(peso.value);
+    dadosIMC.altura = parseFloat(altura.value);
+    dadosIMC.genero = opcaoSelecionada ? opcaoSelecionada.value : "";
+       
+}
 
-        dadosIMC.peso = parseFloat(peso.value);
-        dadosIMC.altura = parseFloat(altura.value);
-        dadosIMC.genero = opcaoSelecionada ? opcaoSelecionada.value : "";
+
+
+
+    function validarValores(){ 
+        try{
+            
+            if(dadosIMC.altura === 0){
+                throw new Error('Divisão por 0 não permitida !');
+            }
+
+            
+        }
+        catch (e){
+            console.log('Erro ao tentar dividir por 0 !');
+        }
+
 
     }
 
 
 
+    function calcularIMC(){
+        dadosIMC.altura = dadosIMC.altura * dadosIMC.altura;
+        dadosIMC.resultado_imc = dadosIMC.peso / dadosIMC.altura ;
 
-    function validarValores(){}
-
-
-
-    function calcularIMC(){}
-
-
-
-
-
-    function classificarIMC(){}
+    // console.log(dadosIMC.peso);
+    // console.log(dadosIMC.altura);
+    // console.log(dadosIMC.genero);
+    // console.log(dadosIMC.resultado_imc);
+    }
 
 
-    function gerenciarFuncoes(e){
-        e.preventDefault();
 
+
+
+    function classificarIMC(){
+        
+        
+    }
+
+
+    function gerenciarFuncoes(){
         setarValores();
         validarValores();
         calcularIMC();
@@ -136,3 +161,11 @@ function setarValores(){
         //renderiza o resultado na tela
     }
 
+const form_imc = document.querySelector('#formulario_imc');
+
+
+form_imc.addEventListener('submit', (e) => {
+    e.preventDefault();
+    gerenciarFuncoes();
+
+} );

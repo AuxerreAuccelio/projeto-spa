@@ -77,7 +77,62 @@ function calcularValor(moeda_para_converter){
     console.log(moeda2);
     entrada2.value = "";
     });
-    
-    
+
 }
+
+
+
+
+
+
+
+const dadosIMC = {
+    peso: 0,
+    altura: 0,
+    genero: "",
+    resultado_imc: 0,
+};    
+
+
+
+
+
+
+function setarValores(){
+        const peso = document.querySelector('#peso');
+        const altura = document.querySelector('#altura');
+        const resultado_imc = document.querySelector('#resultado_imc');
+        const opcaoSelecionada = document.querySelectorAll('input[name="genero"]');
+
+        dadosIMC.peso = parseFloat(peso.value);
+        dadosIMC.altura = parseFloat(altura.value);
+        dadosIMC.genero = opcaoSelecionada ? opcaoSelecionada.value : "";
+
+    }
+
+
+
+
+    function validarValores(){}
+
+
+
+    function calcularIMC(){}
+
+
+
+
+
+    function classificarIMC(){}
+
+
+    function gerenciarFuncoes(e){
+        e.preventDefault();
+
+        setarValores();
+        validarValores();
+        calcularIMC();
+        classificarIMC();
+        //renderiza o resultado na tela
+    }
 

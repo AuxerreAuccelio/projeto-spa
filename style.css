@@ -55,15 +55,12 @@ nav{
     padding: 30px 70px;
     margin: 0px 20px;
     border-radius: 15px;
-    width: 100%;
-    
-    
+    width: 100%;  
 }
 
-section{  
-    /* display: flex;    */
-    /* align-items: end;  */
-    
+#radio{
+    border: 2px solid palegreen;
+    width: 40%;
 }
 
 h2{
@@ -71,11 +68,50 @@ h2{
     margin: 30px;
 }
 
-input{
-    min-width: 50ch;
+#formulario_imc{
+    display: flex;
+    flex-direction: Column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 
-#moedas p{
+#peso, #altura{
+    /* border: 2px solid yellow; */
+} 
+
+.grupo_radio{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.grupo_radio label{
+    /* border: 2px solid palevioletred; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.grupo_radio input[type="radio"]{
+    min-width: auto;
+    width: auto;
+    
+}
+
+input{
+    /* border: 2px solid yellowgreen; */
+    min-width: 50ch;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#moedas p, 
+#imc p{
     /* border: 2px solid crimson; */
     margin: 10px;
     padding: 10px;

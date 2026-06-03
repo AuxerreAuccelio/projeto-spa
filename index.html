@@ -44,8 +44,27 @@
         
         
         
+        <section id="imc" hidden> 
+          <h2> Calcular IMC </h2>
+          <form id="formulario_imc">
+            <input type="number" id="peso" placeholder="Digite o valor da sua massa em Kilograma !">
+            <input type="number" id="altura" placeholder="Digite o valor da altura em metros !">
         
-        <section id="imc" hidden>DESAFIO 2</section>
+        <div class="grupo_radio">
+            <label><input type="radio" name="genero" id="masculino">Masculino</label>
+            <label><input type="radio" name="genero" id="feminino">Feminino</label>
+        </div>    
+
+        
+            <button id="radio" onclick="classificarIMC()" >Escolher</button>
+          </form>
+          <p id="resultado_imc" placeholder="Resultado aparecerá aqui !"></p> 
+        </section>
+
+   
+        
+
+
         <section id="temperatura" hidden>DESAFIO 3</section>
         <section id="velocidade" hidden>DESAFIO 4</section>
         <section id="massa" hidden>DESAFIO 5</section>

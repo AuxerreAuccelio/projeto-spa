@@ -47,12 +47,12 @@
         <section id="imc" hidden> 
           <h2> Calcular IMC </h2>
           <form id="formulario_imc">
-            <input type="number" id="peso" placeholder="Digite o valor da sua massa em Kilograma !">
-            <input type="number" id="altura" placeholder="Digite o valor da altura em metros !">
+            <input type="number" id="peso" step="0.01" placeholder="Digite o valor da sua massa em Kilograma !">
+            <input type="number" id="altura" step="any" placeholder="Digite o valor da altura em metros !">
         
             <div class="grupo_radio">
-                <label><input type="radio" name="genero" id="masculino">Masculino</label>
-                <label><input type="radio" name="genero" id="feminino">Feminino</label>
+                <label><input type="radio" name="genero" id="masculino" value="Masculino">Masculino</label>
+                <label><input type="radio" name="genero" id="feminino" value="Feminino">Feminino</label>
             </div>    
 
         

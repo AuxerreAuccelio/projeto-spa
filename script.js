@@ -89,7 +89,9 @@ function calcularValor(moeda_para_converter){
 const dadosIMC = {
     peso: 0,
     altura: 0,
-    genero: "",
+    genero_masculino: "",
+    genero_feminino: "",
+    genero_escolhido: "",
     resultado_imc: 0,
     form_imc: "",
 };    
@@ -103,12 +105,14 @@ function setarValores(){
     
     const peso = document.querySelector('#peso');
     const altura = document.querySelector('#altura');
-    const opcaoSelecionada = document.querySelector('input[name="genero"]:checked');
+    const genero_masculino = document.querySelector('#masculino'); 
+    const genero_feminino = document.querySelector('#feminino'); 
     const resultado_imc = document.querySelector('#resultado_imc');
     
     dadosIMC.peso = parseFloat(peso.value);
     dadosIMC.altura = parseFloat(altura.value);
-    dadosIMC.genero = opcaoSelecionada ? opcaoSelecionada.value : "";
+    dadosIMC.genero_masculino = genero_masculino ? genero_masculino : "";
+    dadosIMC.genero_feminino = genero_feminino ? genero_feminino : "";
        
 }
 
@@ -116,6 +120,15 @@ function setarValores(){
 
 
     function validarValores(){ 
+
+        if(dadosIMC.genero_masculino.checked == true){
+            dadosIMC.genero_escolhido = dadosIMC.genero_masculino.value;
+        } else if (dadosIMC.genero_feminino.checked == true) {
+            dadosIMC.genero_escolhido = dadosIMC.genero_feminino.value;
+        } else {
+            alert('Escolha uma opção de gênero !'); 
+        }
+
         try{
             
             if(dadosIMC.altura === 0){
@@ -136,11 +149,6 @@ function setarValores(){
     function calcularIMC(){
         dadosIMC.altura = dadosIMC.altura * dadosIMC.altura;
         dadosIMC.resultado_imc = dadosIMC.peso / dadosIMC.altura ;
-
-    // console.log(dadosIMC.peso);
-    // console.log(dadosIMC.altura);
-    // console.log(dadosIMC.genero);
-    // console.log(dadosIMC.resultado_imc);
     }
 
 
@@ -148,7 +156,31 @@ function setarValores(){
 
 
     function classificarIMC(){
+        if(dadosIMC.genero_masculino.checked == true){
+            if(dadosIMC.resultado_imc > 29.99){ alert('Obesidade'); } 
+            else if (dadosIMC.resultado_imc > 24.99){ alert('Sobrepeso'); }
+            else if (dadosIMC.resultado_imc > 18.49){ alert('Normal'); }
+            else alert('Abaixo do Peso'); 
+            dadosIMC.genero_escolhido = dadosIMC.genero_masculino.value;          
+            
+        } 
         
+        else if (dadosIMC.genero_feminino.checked == true) {
+            if(dadosIMC.resultado_imc > 28.99){ alert('Obesidade'); } 
+            else if (dadosIMC.resultado_imc > 23.99){ alert('Sobrepeso'); }
+            else if (dadosIMC.resultado_imc > 18.49){ alert('Normal'); }
+            else alert('Abaixo do Peso'); 
+            dadosIMC.genero_escolhido = dadosIMC.genero_feminino.value;
+        }  
+        
+        else {
+            alert('Escolha uma opção de gênero !'); 
+        }
+
+    // console.log(dadosIMC.peso);
+    // console.log(dadosIMC.altura);
+    console.log(dadosIMC.resultado_imc);
+    // console.log(dadosIMC.resultado_imc);
         
     }
 

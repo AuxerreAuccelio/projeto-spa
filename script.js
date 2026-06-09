@@ -8,15 +8,24 @@ const btn_real_dolar = document.querySelector('#btn_real_dolar');
 const entrada1 = document.querySelector('form #entrada_dolar_real');
 const entrada2 = document.querySelector('form #entrada_real_dolar');
 
-const lua = document.querySelector('img');
+let icon = document.querySelector('img');
 const main = document.querySelector('main');
 
 
+
 function alterarModo(){
-    lua.addEventListener('click', (event) => {
+    icon.addEventListener('click', (event) => {
         event.preventDefault();
         main.classList.toggle('tema_dark');
         console.log(main.classList.value);
+
+        if(main.classList.contains('tema_dark')){
+            icon.src = './sun-regular.png';
+        }
+        else {
+            icon.src = './moon-solid.png';
+        }
+        console.log(document.main.classList.value);
     });
 }
 

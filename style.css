@@ -13,13 +13,29 @@ body{
     
 }
 
+body.tema_dark{
+    background-color: #282828;
+    color: white;
+}
+
+body.tema_dark input {
+    background-color: 323232;
+    color: white;
+}
+
 header{
     /* border: 2px solid crimson; */
     background-color: grey;
     text-align: center;
     color: white;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;;
+}
 
+header img{
+    width: 5%;
+    
 }
 
 .container{
@@ -120,6 +136,12 @@ h2{
     min-width: auto;
     width: auto;
     
+}
+
+#resultado_imc{
+    color: crimson;
+    font-weight: 900;
+    text-align: center;
 }
 
 input{

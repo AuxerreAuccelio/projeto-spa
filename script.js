@@ -8,6 +8,22 @@ const btn_real_dolar = document.querySelector('#btn_real_dolar');
 const entrada1 = document.querySelector('form #entrada_dolar_real');
 const entrada2 = document.querySelector('form #entrada_real_dolar');
 
+const lua = document.querySelector('img');
+const main = document.querySelector('main');
+
+
+function alterarModo(){
+    lua.addEventListener('click', (event) => {
+        event.preventDefault();
+        body.classList.toggle('tema_dark');
+        console.log(body.classList.value);
+    });
+}
+
+
+
+alterarModo();
+
 
 
 
@@ -86,6 +102,9 @@ function calcularValor(moeda_para_converter){
 
 
 
+
+
+
 const dadosIMC = {
     peso: 0,
     altura: 0,
@@ -95,11 +114,6 @@ const dadosIMC = {
     resultado_imc: 0,
     form_imc: "",
 };    
-
-
-
-
-
 
 function setarValores(){   
     
@@ -116,10 +130,9 @@ function setarValores(){
        
 }
 
-
-
-
     function validarValores(){ 
+
+        
 
         if(dadosIMC.genero_masculino.checked == true){
             dadosIMC.genero_escolhido = dadosIMC.genero_masculino.value;
@@ -129,31 +142,22 @@ function setarValores(){
             alert('Escolha uma opção de gênero !'); 
         }
 
-        try{
-            
-            if(dadosIMC.altura === 0){
-                throw new Error('Divisão por 0 não permitida !');
+// console.log(dadosIMC.altura);
+           
+            if(dadosIMC.altura === 0){                
+                alert('Erro ao tentar dividir por 0 !');
+                 
             }
-
-            
-        }
-        catch (e){
-            console.log('Erro ao tentar dividir por 0 !');
-        }
-
-
+//Colocar um comando para matar o programa aqui, pois ele ainda dá continuidade            
     }
+   
 
-
+    
 
     function calcularIMC(){
         dadosIMC.altura = dadosIMC.altura * dadosIMC.altura;
         dadosIMC.resultado_imc = dadosIMC.peso / dadosIMC.altura ;
     }
-
-
-
-
 
     function classificarIMC(){
         if(dadosIMC.genero_masculino.checked == true){
@@ -161,7 +165,8 @@ function setarValores(){
             else if (dadosIMC.resultado_imc > 24.99){ alert('Sobrepeso'); }
             else if (dadosIMC.resultado_imc > 18.49){ alert('Normal'); }
             else alert('Abaixo do Peso'); 
-            dadosIMC.genero_escolhido = dadosIMC.genero_masculino.value;          
+            dadosIMC.genero_escolhido = dadosIMC.genero_masculino.value;   
+            resultado_imc.innerText = `O IMC respectivo é : ${dadosIMC.resultado_imc}`;       
             
         } 
         

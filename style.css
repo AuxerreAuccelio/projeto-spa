@@ -13,14 +13,19 @@ body{
     
 }
 
-body.tema_dark{
+main.tema_dark{
     background-color: #282828;
     color: white;
 }
 
-body.tema_dark input {
-    background-color: 323232;
+main.tema_dark input {
+    border-color: white;
+    background-color: #000000;
     color: white;
+}
+
+main.tema_dark input::placeholder{
+    color: rgb(255, 255, 255);
 }
 
 header{

@@ -15,8 +15,8 @@ const main = document.querySelector('main');
 function alterarModo(){
     lua.addEventListener('click', (event) => {
         event.preventDefault();
-        body.classList.toggle('tema_dark');
-        console.log(body.classList.value);
+        main.classList.toggle('tema_dark');
+        console.log(main.classList.value);
     });
 }
 

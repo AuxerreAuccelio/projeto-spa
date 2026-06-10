@@ -211,7 +211,15 @@ let resultado_regra3 = document.querySelector("#resultado_regra3");
 
  function regra3(){
     formulario_regra3.addEventListener('submit', (e) => {
-        e.preventDefault();      
+        e.preventDefault();    
+        var1 = parseFloat(var1.value);  
+
+        if(var1 === 0){
+          // console.log(typeof(var1));
+          alert('Não é possível dividir por 0 !');
+          return;
+        }
+
         /* console.log(var1.value); console.log(var2.value); console.log(var3.value); */
         let res = parseFloat((var2.value)) * parseFloat(var3.value);
         res = res / parseFloat(var1.value);

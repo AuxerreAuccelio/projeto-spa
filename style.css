@@ -175,6 +175,64 @@ input{
     width: 90%;    
 }
 
+
+
+
+#regra3{
+    /* display: flex;
+    flex-direction: column; */    
+}
+
+#formulario_regra3{
+    /* border: 1px solid crimson; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rule3{
+    /* border: 1px solid saddlebrown; */
+    display: flex;
+    
+}
+
+.fr1{
+    /* border: 2px solid rgb(231, 228, 21); */
+    /* display: flex;
+    flex-direction: column; */
+}
+
+
+.fr2{
+    /* border: 2px solid rgb(13, 221, 58); */
+    /* display: flex;
+    flex-direction: column; */
+}
+
+#btn_regra3{
+    /* border: 2px solid rgb(46, 7, 219); */
+    justify-content: center;
+    cursor: pointer;
+}
+
+.igual{
+    display: flex;
+    align-items: center;
+}
+
+.igual img{
+    /* border: 1px solid rgb(248, 2, 248); */
+    width: 30px;
+    
+}
+
+#resultado_regra3{
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+
 main{
     /* border: 2px solid rgb(220, 20, 187); */
     background-color: rgb(255, 255, 255);

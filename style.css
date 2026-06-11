@@ -86,6 +86,7 @@ nav{
     margin: 0px 20px;
     border-radius: 15px;
     width: 100%;  
+    cursor: pointer;
 }
 
 #btn_dolar_real,
@@ -94,6 +95,7 @@ nav{
     padding: 8px;
     background-color: green;
     color: white;
+    cursor: pointer;
 }
 
 #formulario, 
@@ -112,6 +114,7 @@ nav{
     margin: 5px;
     background-color: green;
     color: white;
+    cursor: pointer;
 }
 
 h2{
@@ -232,9 +235,38 @@ input{
     margin: 5px;
 }
 
+.grupo_radio_temp{
+    /* border: 2px solid brown; */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    width: auto;    
+}
 
+#form_temperatura{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
 
+#btn_temperatura{
+    border: 2px solid palegreen;
+    width: auto;
+    padding: 8px;
+    margin: 5px;
+    background-color: green;
+    color: white;
+    cursor: pointer;   
+}
 
+#resultado_temperatura{
+    color: crimson;
+    font-weight: 900;
+    text-align: center;
+}
 
 
 

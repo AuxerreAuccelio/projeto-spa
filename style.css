@@ -305,6 +305,46 @@ input{
 
 
 
+.grupo_radio_massa{
+    /* border: 2px solid brown; */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    width: auto;    
+}
+
+#form_massa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#btn_massa{
+    border: 2px solid palegreen;
+    width: auto;
+    padding: 8px;
+    margin: 5px;
+    background-color: green;
+    color: white;
+    cursor: pointer;   
+}
+
+#resultado_massa{
+    color: crimson;
+    font-weight: 900;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
 main{
     /* border: 2px solid rgb(220, 20, 187); */
     background-color: rgb(255, 255, 255);

@@ -10,7 +10,7 @@
   <body>
     <header>
       <h1>Painel de Ferramentas</h1>
-      <img src="./moon-solid.png" alt="moon">
+      <img src="./moon-solid.png" alt="moon" />
     </header>
 
     <div class="container">
@@ -25,55 +25,89 @@
         </nav>
       </aside>
 
-      <main>       
-        <section id="moedas" hidden> 
-          <h2> Conversor de Moedas </h2>
-            <form id="formulario">
-              <input type="number" id="entrada_dolar_real" placeholder="Digite o valor em Dólares que queira converter para Reais !">
-              <button type="submit" id="btn_dolar_real">Converter</button>
-            </form>
-            <p id="dolar_real" placeholder="Resultado aparecerá aqui !"></p> 
+      <main>
+        <section id="moedas" hidden>
+          <h2>Conversor de Moedas</h2>
+          <form id="formulario">
+            <input
+              type="number"
+              id="entrada_dolar_real"
+              placeholder="Digite o valor em Dólares que queira converter para Reais !"
+            />
+            <button type="submit" id="btn_dolar_real">Converter</button>
+          </form>
+          <p id="dolar_real" placeholder="Resultado aparecerá aqui !"></p>
 
-            <form id="formulario2">
-              <input type="number" id="entrada_real_dolar" placeholder="Digite o valor em Reais que queira converter para Dólares !">
-              <button type="submit" id="btn_real_dolar">Converter2</button>
-            </form>
-            <p id="real_dolar" placeholder="Resultado aparecerá aqui !"></p> 
+          <form id="formulario2">
+            <input
+              type="number"
+              id="entrada_real_dolar"
+              placeholder="Digite o valor em Reais que queira converter para Dólares !"
+            />
+            <button type="submit" id="btn_real_dolar">Converter2</button>
+          </form>
+          <p id="real_dolar" placeholder="Resultado aparecerá aqui !"></p>
         </section>
-        
-        
-        
-        
-        
-        <section id="imc" hidden> 
-          <h2> Calcular IMC </h2>
-          <form id="formulario_imc">
-            <input type="number" id="peso" step="0.01" placeholder="Digite o valor da sua massa em Kilograma !">
-            <input type="number" id="altura" step="any" placeholder="Digite o valor da altura em metros !">
-        
-            <div class="grupo_radio">
-                <label><input type="radio" name="genero" id="masculino" value="Masculino">Masculino</label>
-                <label><input type="radio" name="genero" id="feminino" value="Feminino">Feminino</label>
-            </div>    
 
-        
+        <section id="imc" hidden>
+          <h2>Calcular IMC</h2>
+          <form id="formulario_imc">
+            <input
+              type="number"
+              id="peso"
+              step="0.01"
+              placeholder="Digite o valor da sua massa em Kilograma !"
+            />
+            <input
+              type="number"
+              id="altura"
+              step="any"
+              placeholder="Digite o valor da altura em metros !"
+            />
+
+            <div class="grupo_radio">
+              <label
+                ><input
+                  type="radio"
+                  name="genero"
+                  id="masculino"
+                  value="Masculino"
+                />Masculino</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="genero"
+                  id="feminino"
+                  value="Feminino"
+                />Feminino</label
+              >
+            </div>
+
             <button id="btn_radio" type="submit">Calcular</button>
           </form>
-          <p id="resultado_imc" placeholder="Resultado aparecerá aqui !"></p> 
+          <p id="resultado_imc" placeholder="Resultado aparecerá aqui !"></p>
         </section>
-
-   
-        
-
 
         <section id="temperatura" hidden>
           <h2>Conversor de Temperatura</h2>
           <form id="form_temperatura">
-            <input type="number" id="entrada_temp" step="any" placeholder="Digite o valor a converter">
+            <input
+              type="number"
+              id="entrada_temp"
+              step="any"
+              placeholder="Digite o valor a converter"
+            />
 
             <div class="grupo_radio_temp">
-              <label><input type="radio" name="temp_direcao" value="c_f">°C → °F</label>
-              <label><input type="radio" name="temp_direcao" value="f_c">°F → °C</label>
+              <label
+                ><input type="radio" name="temp_direcao" value="c_f" />°C →
+                °F</label
+              >
+              <label
+                ><input type="radio" name="temp_direcao" value="f_c" />°F →
+                °C</label
+              >
             </div>
 
             <button type="submit" id="btn_temperatura">Converter</button>
@@ -81,18 +115,31 @@
           <p id="resultado_temperatura"></p>
         </section>
 
-
-
-
-        
         <section id="velocidade" hidden>
           <h2>Conversor de Velocidade</h2>
           <form id="form_velocidade">
-            <input type="number" id="entrada_velocidade" step="any" placeholder="Digite o valor a converter">
+            <input
+              type="number"
+              id="entrada_velocidade"
+              step="any"
+              placeholder="Digite o valor a converter"
+            />
 
             <div class="grupo_radio_vel">
-              <label><input type="radio" name="vel_direcao" value="km_para_mph">km/h → mph</label>
-              <label><input type="radio" name="vel_direcao" value="mph_para_km">mph → km/h</label>
+              <label
+                ><input
+                  type="radio"
+                  name="vel_direcao"
+                  value="km_para_mph"
+                />km/h → mph</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="vel_direcao"
+                  value="mph_para_km"
+                />mph → km/h</label
+              >
             </div>
 
             <button type="submit" id="btn_velocidade">Converter</button>
@@ -100,58 +147,67 @@
           <p id="resultado_velocidade"></p>
         </section>
 
+        <section id="massa" hidden>
+          <h2>Conversor de Massa</h2>
+          <form id="form_massa">
+            <input type="number" id="entrada_massa" step="any" placeholder="Digite o valor a converter"/>
 
+            <div class="grupo_radio_massa">
+              <label><input type="radio" name="direcao_massa" value="kg_para_lbs" />kg → lbs</label>
+              <label><input type="radio" name="massa_direcao" value="lbs_para_kg" />lbs → kg</label>
+            </div>
 
+            <button type="submit" id="#btn_massa">Converter</button>
+          </form>
+          <p id="resultado_massa"></p>
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section id="massa" hidden>DESAFIO 5</section>
-
-
-
-
-
+        
 
         <section id="regra3" hidden>
-          <h2> REGRA DE TRÊS </h2>
+          <h2>REGRA DE TRÊS</h2>
           <form id="formulario_regra3">
             <div class="rule3">
               <div class="fr1">
-                <input type="number" id="var1" step="0.01" placeholder="Digite o primeiro valor ">
-                <input type="number" id="var2" step="any" placeholder="Digite o segundo valor ">
+                <input
+                  type="number"
+                  id="var1"
+                  step="0.01"
+                  placeholder="Digite o primeiro valor "
+                />
+                <input
+                  type="number"
+                  id="var2"
+                  step="any"
+                  placeholder="Digite o segundo valor "
+                />
               </div>
 
               <div class="igual">
-                <img src="./igual_print.png" alt="igual">
+                <img src="./igual_print.png" alt="igual" />
               </div>
-            
+
               <div class="fr2">
-                <input type="number" id="var3" step="0.01" placeholder="Digite o terceiro valor ">
-                <input type="text" id="var4" step="0.01" placeholder="Incógnita Y" readonly>
+                <input
+                  type="number"
+                  id="var3"
+                  step="0.01"
+                  placeholder="Digite o terceiro valor "
+                />
+                <input
+                  type="text"
+                  id="var4"
+                  step="0.01"
+                  placeholder="Incógnita Y"
+                  readonly
+                />
               </div>
             </div>
-                    
+
             <button id="btn_regra3" type="submit">Calcular</button>
           </form>
-          <p id="resultado_regra3" placeholder="Resultado aparecerá aqui !"></p> 
+          <p id="resultado_regra3" placeholder="Resultado aparecerá aqui !"></p>
         </section>
-
-
-
       </main>
     </div>
 
@@ -160,15 +216,6 @@
     </footer>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 <!--  
 

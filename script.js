@@ -280,11 +280,7 @@ temperatura();
 
 
 
-
-
-//COMMIT 2 — CONVERSOR DE VELOCIDADE
 //Fator: 1 km/h = 0.621371 mph
-
 const formulario_velocidade = document.querySelector("#form_velocidade");
 const resultado_velocidade = document.querySelector("#resultado_velocidade");
 
@@ -301,14 +297,20 @@ function velocidade() {
     }
 
     if (direcao.value === "km_para_mph") {
-      resultado_velocidade.innerText = `${valor} km/h = ${(valor * 0.621371).toFixed(4)} mph`;
+      resultado_velocidade.innerText = `${valor} km/h = ${(valor * 0.621371).toFixed(2)} mph`;
     } else {
-      resultado_velocidade.innerText = `${valor} mph = ${(valor / 0.621371).toFixed(4)} km/h`;
+      resultado_velocidade.innerText = `${valor} mph = ${(valor / 0.621371).toFixed(2)} km/h`;
     }
   });
 }
 
 velocidade();
+
+
+
+
+
+
 
 
 

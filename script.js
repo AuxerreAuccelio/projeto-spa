@@ -243,7 +243,8 @@ regra3();
 
 
 
-
+// °C → °F: C × 1.8 + 32
+// °F → °C: (F − 32) / 1.8
 const formulario_temperatura = document.querySelector("#form_temperatura");
 const resultado_temperatura = document.querySelector("#resultado_temperatura");
 
@@ -305,6 +306,37 @@ function velocidade() {
 }
 
 velocidade();
+
+
+
+
+
+
+// Fator: 1 kg = 2.20462 lbs
+const formulario_massa = document.querySelector("#form_massa");
+const resultado_massa = document.querySelector("#resultado_massa");
+
+function massa() {
+  formulario_massa.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const valor = parseFloat(document.querySelector("#entrada_massa").value);
+    const direcao = document.querySelector('input[name="massa_direcao"]:checked');
+
+    if (!direcao) {
+      alert("Selecione a direção da conversão !");
+      return;
+    }
+
+    if (direcao.value === "kg_para_lbs") {
+      resultado_massa.innerText = `${valor} kg = ${(valor * 2.20462).toFixed(2)} lbs`;
+    } else {
+      resultado_massa.innerText = `${valor} lbs = ${(valor / 2.20462).toFixed(2)} kg`;
+    }
+  });
+}
+
+massa();
 
 
 

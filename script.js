@@ -244,6 +244,54 @@ regra3();
 
 
 
+const formulario_temperatura = document.querySelector("#form_temperatura");
+const resultado_temperatura = document.querySelector("#resultado_temperatura");
+
+function temperatura() {
+  formulario_temperatura.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const valor = parseFloat(document.querySelector("#entrada_temp").value);
+    // console.log(valor);
+
+
+    const direcao = document.querySelector('input[name="temp_direcao"]:checked');
+    // console.log(direcao.value);
+
+    if (!direcao) {
+      alert("Selecione a direção da conversão !");
+      return;
+    }
+
+    if (direcao.value === "f_c") {
+    let celsius = parseFloat(((valor - 32 ) / 1.8 ).toFixed(2));
+    resultado_temperatura.innerText = `${celsius} °C = ${valor} °F`; 
+    } else {
+    let farenheit = parseFloat(((valor * 1.8 ) + 32 ).toFixed(2));
+    resultado_temperatura.innerText = `${valor} °C = ${farenheit} °F`; 
+  }
+  }
+);
+}
+
+temperatura();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
